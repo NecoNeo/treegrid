@@ -1,0 +1,17 @@
+.test_grid {
+    border-collapse: collapse;
+    border: solid 2px #808080;
+    width: 100%;
+}
+
+.test_grid td {
+    border: solid 1px #E0E0E0;
+}
+
+.test_grid th {
+    border: solid 1px #E0E0E0;
+}
+
+.test_grid tr {
+    border: solid 1px #E0E0E0;
+}
