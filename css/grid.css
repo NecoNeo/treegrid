@@ -1,17 +1,20 @@
-.test_grid {
+.jq_grid table {
     border-collapse: collapse;
     border: solid 2px #808080;
-    width: 100%;
+    table-layout: fixed;
+    width: 0px;
 }
 
-.test_grid td {
-    border: solid 1px #E0E0E0;
+.jq_grid th {
+    border: solid 1px #808080;
+    background-color: #B6B6B6;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 30px;
 }
 
-.test_grid th {
+.jq_grid td {
     border: solid 1px #E0E0E0;
-}
-
-.test_grid tr {
-    border: solid 1px #E0E0E0;
+    background-color: #FFFFFF;
+    height: 25px;
 }
