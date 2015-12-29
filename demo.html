@@ -18,48 +18,53 @@
                 _devmode : true,
                 columns: [
                     {
-                        'th': 'city id',
+                        'name': 'city id',
                         'key': 'id',
                         'freeze': 'left'
                     },
                     {
-                        'th': 'country name',
+                        'name': 'country name',
                         'key': 'country'
                     },
                     {
-                        'th': 'city name',
+                        'name': 'city name',
                         'key': 'city',
                         //'freeze': 'left'
                     },
                     {
-                        'th': 'language',
+                        'name': 'language',
                         'key': 'language',
                         'freeze': 'right'
                     },
                     {
-                        'th': 'ab',
+                        'name': 'ab',
                         'key': 'ab'
                     },
                     {
-                        'th': 'cd',
+                        'name': 'cd',
                         'key': 'cd',
                         'freeze': 'default'
                     },
                     {
-                        'th': 'ef',
+                        'name': 'ef',
                         'key': 'ef',
                         'freeze': 'right'
                     },
                     {
-                        'th': 'gh',
+                        'name': 'gh',
                         'key': 'gh'
                     },
                     {
-                        'th': 'ij',
+                        'name': 'ij',
                         'key': 'ij'
                     }
                 ],
+                selectRow: function (row) {
+                    alert(JSON.stringify(row));
+                }
             });
+
+
             var rows = [
                 {
                     id: '01',

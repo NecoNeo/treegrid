@@ -39,11 +39,10 @@
 .jq_grid ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    border-top: solid 2px #808080;
+    /*border-top: solid 2px #808080;*/
 }
 
 .jq_grid ::-webkit-scrollbar-track {
-    border-radius: 5px;
     -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
 }
 
