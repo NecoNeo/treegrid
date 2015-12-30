@@ -16,13 +16,21 @@
         $(function () {
             $._grid('#grid', {
                 _devmode : true,
-                width: 1600,
-                height: 500,
+                width: 950,
+                height: 300,
+                formatters: {
+                    'id': function (row) {
+                        var $a = $('<a href="#">' + row.id + '</a>');
+                        return $a;
+                    }
+                },
                 columns: [
                     {
                         'name': 'city id',
                         'key': 'id',
-                        'freeze': 'left'
+                        'freeze': 'left',
+                        'align': 'right',
+                        'width': 80
                     },
                     {
                         'name': 'country name',
@@ -31,7 +39,7 @@
                     {
                         'name': 'city name',
                         'key': 'city',
-                        //'freeze': 'left'
+                        'freeze': 'left'
                     },
                     {
                         'name': 'language',
@@ -39,22 +47,28 @@
                         'freeze': 'right'
                     },
                     {
-                        'name': 'ab',
-                        'key': 'ab'
-                    },
-                    {
                         'name': 'cd',
                         'key': 'cd',
+                        'width': 50,
+                        'align': 'right',
                         'freeze': 'default'
                     },
                     {
                         'name': 'ef',
                         'key': 'ef',
+                        'width': 50,
+                        'align': 'right',
                         'freeze': 'right'
                     },
                     {
                         'name': 'gh',
-                        'key': 'gh'
+                        'key': 'gh',
+                        'width': 50,
+                        'align': 'right'
+                    },
+                    {
+                        'name': 'ab',
+                        'key': 'ab'
                     },
                     {
                         'name': 'ij',
@@ -93,9 +107,11 @@
                         'key': 'yz'
                     }
                 ],
-                // selectRow: function (row) {
-                //     alert(JSON.stringify(row));
-                // }
+                selectRow: function (row, colIndex, rowIndex) {
+                    $('#rowIndex').html(rowIndex);
+                    $('#colIndex').html(colIndex);
+                    $('#rowInfo').html(JSON.stringify(row));
+                }
             });
 
 
@@ -317,24 +333,6 @@
                     gh: 3
                 },
                 {
-                    id: '06',
-                    city: 'London',
-                    country: 'Greate Britain',
-                    language: 'english',
-                    cd: 0,
-                    ef: 2,
-                    gh: 3
-                },
-                {
-                    id: '06',
-                    city: 'London',
-                    country: 'Greate Britain',
-                    language: 'english',
-                    cd: 0,
-                    ef: 2,
-                    gh: 3
-                },
-                {
                     id: '07',
                     city: 'Napoli',
                     country: 'Italia',
@@ -356,5 +354,9 @@
 </head>
 <body>
 <table id="grid"><tr><td>111111</td></tr></table>
+<div>You have selected:</div>
+<div>row: <span id="rowIndex"></span></div>
+<div>col: <span id="colIndex"></span></div>
+<div id="rowInfo"></div>
 </body>
 </html>

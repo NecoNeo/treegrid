@@ -1,5 +1,12 @@
 * {
     font-family:  "微软雅黑";
+    margin:0px;
+    padding:0px;
+    
+}
+
+.jq_grid * {
+    box-sizing: border-box;
 }
 
 .jq_grid table {
@@ -14,14 +21,14 @@
     background-color: #909090;
     color: #FFFFFF;
     font-weight: bold;
-    line-height: 30px;
+    height: 30px;
 }
 
 .jq_grid td {
-    border: solid 1px #E0E0E0;
+    border: solid 1px #C0C0C0;
     background-color: #FFFFFF;
     color: #303030;
-    line-height: 25px;
+    height: 25px;
 }
 
 .jq_grid td, .jq_grid th {
@@ -33,27 +40,22 @@
 }
 
 .jq_grid [data-role=left-columns] td {
-    border: solid 1px #E0E0E0;
     background-color: #F0F0F0;
-    height: 25px;
-    padding: 1px 3px;
 }
 
 .jq_grid [data-role=right-columns] td {
-    border: solid 1px #E0E0E0;
     background-color: #F0F0F0;
-    height: 25px;
-    padding: 1px 3px;
 }
 
 .jq_grid ::-webkit-scrollbar {
     width: 15px;
     height: 15px;
+    border: 0px;
     /*border-top: solid 2px #808080;*/
 }
 
 .jq_grid ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+    /*-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);*/
 }
 
 .jq_grid ::-webkit-scrollbar-thumb {
