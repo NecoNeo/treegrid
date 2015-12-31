@@ -26,6 +26,13 @@
                 },
                 columns: [
                     {
+                        'name': 'index',
+                        'key': 'index',
+                        'freeze': 'left',
+                        'align': 'left',
+                        'width': 60
+                    },
+                    {
                         'name': 'city id',
                         'key': 'id',
                         'freeze': 'left',
@@ -107,9 +114,12 @@
                         'key': 'yz'
                     }
                 ],
-                selectRow: function (row, colIndex, rowIndex) {
+                selectRow: function (row, col, rowIndex) {
                     $('#rowIndex').html(rowIndex);
-                    $('#colIndex').html(colIndex);
+                    $('#col').html(col.key);
+                    $('#colIndex').html(col.index);
+                    $('#val').html("");
+                    $('#val').html(row[col.key]);
                     $('#rowInfo').html(JSON.stringify(row));
                 }
             });
@@ -123,7 +133,8 @@
                     language: 'deutsch',
                     cd: 0,
                     ef: 2,
-                    gh: 3
+                    gh: 3,
+                    index: 'testtest'
                 },
                 {
                     id: '02',
@@ -356,7 +367,9 @@
 <table id="grid"><tr><td>111111</td></tr></table>
 <div>You have selected:</div>
 <div>row: <span id="rowIndex"></span></div>
-<div>col: <span id="colIndex"></span></div>
+<div>colIndex: <span id="colIndex"></span></div>
+<div>col: <span id="col"></span></div>
+<div>value: <span id="val"></span></div>
 <div id="rowInfo"></div>
 </body>
 </html>
