@@ -1,12 +1,7 @@
-* {
-    font-family:  "微软雅黑";
-    margin:0px;
-    padding:0px;
-    
-}
-
-.jq_grid * {
+.jq_grid, .jq_grid * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .jq_grid table {
@@ -18,7 +13,7 @@
 
 .jq_grid th {
     border: solid 1px #6E6E6E;
-    background-color: #909090;
+    background-color: #808080;
     color: #FFFFFF;
     font-weight: bold;
     height: 30px;
@@ -46,7 +41,7 @@
 
 .jq_grid [data-role=left-columns] td.row-hover, .jq_grid [data-role=left-columns] td.row-hover.col-hover,
 .jq_grid [data-role=right-columns] td.row-hover, .jq_grid [data-role=right-columns] td.row-hover.col-hover {
-    background-color: #D0D0FF;
+    background-color: #E0E0FF;
 }
 
 .jq_grid [data-role=left-columns] td.col-hover,
@@ -60,6 +55,15 @@
 
 .jq_grid td.col-hover {
     background-color: #FAFAFF;
+}
+
+.jq_grid td.active {
+    background-color: #F0F0FF;
+}
+
+.jq_grid [data-role=left-columns] td.active,
+.jq_grid [data-role=right-columns] td.active {
+    background-color: #E0E0FF;
 }
 
 .jq_grid ::-webkit-scrollbar {
