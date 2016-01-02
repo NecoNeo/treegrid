@@ -13,7 +13,7 @@
 
 .jq_grid th {
     border: solid 1px #6E6E6E;
-    background-color: #808080;
+    background-color: #8E8E8E;
     color: #FFFFFF;
     font-weight: bold;
     height: 30px;
@@ -39,9 +39,15 @@
     background-color: #F0F0F0;
 }
 
-.jq_grid [data-role=left-columns] td.row-hover, .jq_grid [data-role=left-columns] td.row-hover.col-hover,
-.jq_grid [data-role=right-columns] td.row-hover, .jq_grid [data-role=right-columns] td.row-hover.col-hover {
-    background-color: #E0E0FF;
+.jq_grid [data-role=left-columns] td.row-hover,
+.jq_grid [data-role=left-columns] td.row-hover.col-hover,
+.jq_grid [data-role=right-columns] td.row-hover,
+.jq_grid [data-role=right-columns] td.row-hover.col-hover,
+.jq_grid [data-role=left-columns] td.row-hover.active,
+.jq_grid [data-role=left-columns] td.row-hover.col-hover.active,
+.jq_grid [data-role=right-columns] td.row-hover.active,
+.jq_grid [data-role=right-columns] td.row-hover.col-hover.active {
+    background-color: #D0D0FF;
 }
 
 .jq_grid [data-role=left-columns] td.col-hover,
@@ -49,8 +55,11 @@
     background-color: #E8E8EF;
 }
 
-.jq_grid td.row-hover, .jq_grid td.row-hover.col-hover {
-    background-color: #F0F0FF;
+.jq_grid td.row-hover,
+.jq_grid td.row-hover.col-hover,
+.jq_grid td.row-hover.active,
+.jq_grid td.row-hover.col-hover.active {
+    background-color: #E0E0FF;
 }
 
 .jq_grid td.col-hover {
@@ -58,12 +67,16 @@
 }
 
 .jq_grid td.active {
-    background-color: #F0F0FF;
+    background-color: #AFAFF0;
 }
 
 .jq_grid [data-role=left-columns] td.active,
 .jq_grid [data-role=right-columns] td.active {
-    background-color: #E0E0FF;
+    background-color: #A0A0F0;
+}
+
+.jq_grid th.sort-col {
+    background-color: #7070E0;
 }
 
 .jq_grid ::-webkit-scrollbar {
